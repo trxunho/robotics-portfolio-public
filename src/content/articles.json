@@ -324,6 +324,11 @@
         "kind": "image",
         "src": "/articles/visions-06/04.png",
         "alt": "多功能配件 · 画面 4"
+      },
+      {
+        "kind": "video",
+        "src": "/articles/visions-06/05.mp4",
+        "alt": "多功能配件 · 画面 5"
       }
     ]
   },
