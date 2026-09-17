@@ -159,7 +159,13 @@
     "summary": "1 段视频",
     "html": "",
     "minutes": 0,
-    "media": []
+    "media": [
+      {
+        "kind": "video",
+        "src": "/articles/visions-01/红外视频1-ioql.mp4",
+        "alt": "红外视频1.mp4"
+      }
+    ]
   },
   {
     "slug": "visions-02",
