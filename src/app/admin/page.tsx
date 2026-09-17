@@ -386,6 +386,20 @@ export default function AdminPage() {
           <p className={styles.muted} style={{ marginTop: 14 }}>
             令牌仅保存在当前浏览器会话（关闭标签页即清除），并直接用于访问 GitHub API，不会发送给任何第三方。
           </p>
+          <details style={{ marginTop: 10, fontSize: 13, lineHeight: 1.7 }}>
+            <summary style={{ cursor: "pointer", color: "#58a6ff" }}>保存后多久能在线上看到？两个站点的更新机制</summary>
+            <div style={{ marginTop: 8, opacity: 0.9 }}>
+              <p style={{ margin: "6px 0" }}>
+                <strong>① trxunho.github.io（GitHub Pages）</strong>：保存后由 GitHub Actions 自动构建并部署，通常 <strong>1–2 分钟</strong> 即可上线，无需等待定时任务。
+              </p>
+              <p style={{ margin: "6px 0" }}>
+                <strong>② tanrongxin-cms.app.workbuddy.host（WorkBuddy）</strong>：由部署同步任务更新。如需立即生效，可在 WorkBuddy 的「自动化」面板找到「同步作品集站点」任务，点击 <strong>运行</strong> 手动触发（也默认每小时自动同步一次）。
+              </p>
+              <p className={styles.muted} style={{ margin: "6px 0 0" }}>
+                注：GitHub Pages 自动部署需要在仓库 <code>robotics-portfolio-public</code> 的 Settings → Secrets 中配置一个名为 <code>PAGES_DEPLOY_TOKEN</code> 的令牌（即你登录后台所用的同一枚 <code>repo</code> 令牌即可）。
+              </p>
+            </div>
+          </details>
         </div>
       </div>
     );
