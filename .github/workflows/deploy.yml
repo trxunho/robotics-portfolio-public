@@ -42,5 +42,5 @@ jobs:
           external_repository: trxunho/trxunho.github.io
           publish_dir: ./out
           publish_branch: main
-          user_name: github-actions[bot]
-          user_email: github-actions[bot]@users.noreply.github.com
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
