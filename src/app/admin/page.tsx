@@ -52,8 +52,16 @@ function fileToBase64(file: File): Promise<string> {
 function sanitizeName(name: string): string {
   const dot = name.lastIndexOf(".");
   const ext = dot >= 0 ? name.slice(dot).toLowerCase().replace(/[^.a-z0-9]/g, "") : "";
-  const base = (dot >= 0 ? name.slice(0, dot) : name).replace(/[^a-zA-Z0-9_-]/g, "-").replace(/-+/g, "-").toLowerCase();
-  return (base || "file") + ext;
+  // 保留中文/Unicode 字母数字与连字符，仅把文件系统不安全字符与空白替换为“-”，避免中文名被洗成 file.mp4 造成覆盖或空提交
+  const base = (dot >= 0 ? name.slice(0, dot) : name)
+    .replace(/[\\/:*?"<>|#\s]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .toLowerCase();
+  const safe = base || "file";
+  // 加 4 位随机后缀保证同名文件不互相覆盖（否则 git/trees 判定无变化→空提交）
+  const suffix = Math.random().toString(36).slice(2, 6);
+  return `${safe}-${suffix}${ext}`;
 }
 
 export default function AdminPage() {
@@ -259,9 +267,23 @@ export default function AdminPage() {
     setBusy(true);
     setStatus({ type: "busy", msg: "正在提交到 GitHub…" });
     try {
+      // 关键修复：先把本次待上传的媒体并入 articlesData，再序列化 articles.json。
+      // 否则写进仓库的 articles.json 不含新视频引用，网页就读不到、看不到。
+      const finalArticles = articlesData.map((a) => {
+        const added = pendingMedia.filter((m) => m.slug === a.slug);
+        if (!added.length) return a;
+        return {
+          ...a,
+          media: [
+            ...(a.media || []),
+            ...added.map((m) => ({ kind: m.kind, src: `/articles/${m.slug}/${m.filename}`, alt: m.alt || "" })),
+          ],
+        };
+      });
+
       const files: { path: string; content?: string; encoding?: string; deletion?: boolean }[] = [];
       if (dirtyArticles || pendingMedia.length || removedMedia.length) {
-        const json = JSON.stringify(articlesData, null, 2);
+        const json = JSON.stringify(finalArticles, null, 2);
         files.push({ path: `${CONTENT_DIR}/articles.json`, content: utf8ToBase64(json), encoding: "base64" });
       }
       if (dirtySite && siteData) {
@@ -271,7 +293,6 @@ export default function AdminPage() {
       for (const m of pendingMedia) {
         const b64 = await fileToBase64(m.file);
         files.push({ path: `public/articles/${m.slug}/${m.filename}`, content: b64, encoding: "base64" });
-        patchArticleSilent(m.slug, m.kind, `/articles/${m.slug}/${m.filename}`, m.alt);
       }
       for (const p of removedMedia) files.push({ path: p, deletion: true });
       if (files.length === 0) {
@@ -282,6 +303,7 @@ export default function AdminPage() {
       await commitFiles(files);
       const b2 = await getBase();
       setBase(b2);
+      setArticlesData(finalArticles);
       setDirtyArticles(false);
       setDirtySite(false);
       setPendingMedia([]);
@@ -301,10 +323,6 @@ export default function AdminPage() {
       setBusy(false);
     }
   }
-  function patchArticleSilent(slug: string, kind: "image" | "video", src: string, alt: string) {
-    setArticlesData((prev) => prev.map((a) => (a.slug === slug ? { ...a, media: [...(a.media || []), { kind, src, alt }] } : a)));
-  }
-
   const currentArticle = useMemo(() => {
     if (selected.kind === "article" || selected.kind === "new") return articlesData.find((a) => a.slug === (selected as any).slug) || null;
     return null;
