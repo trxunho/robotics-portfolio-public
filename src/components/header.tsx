@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { columns, site } from "@/content/articles";
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
@@ -8,7 +9,7 @@ export default function Header() {
       <div className="wrap header-inner">
         <Link className="brand" href="/" aria-label="个人作品集首页">
           P<span className="accent">.</span>
-          <span className="brand-caption">谭荣昕的个人主页</span>
+          <span className="brand-caption">{site.brand}</span>
         </Link>
         <button
           className="menu-button"
@@ -23,15 +24,11 @@ export default function Header() {
           className={open ? "nav is-open" : "nav"}
           aria-label="主导航"
         >
-          <Link onClick={() => setOpen(false)} href="/#research">
-            行业调研
-          </Link>
-          <Link onClick={() => setOpen(false)} href="/#essays">
-            思想随笔
-          </Link>
-          <Link onClick={() => setOpen(false)} href="/#visions">
-            立象尽意
-          </Link>
+          {columns.map((c) => (
+            <Link key={c.id} onClick={() => setOpen(false)} href={`/#${c.id}`}>
+              {c.title}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>

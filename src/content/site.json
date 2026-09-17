@@ -1,0 +1,35 @@
+{
+  "brand": "谭荣昕的个人主页",
+  "hero": {
+    "eyebrow": "OBSERVE / REFLECT / CREATE",
+    "edition": "谭荣昕 · 思考与实践",
+    "titleLine1": "观其变，思其理。",
+    "titleAccent": "立象以尽意。",
+    "subtitle": "关于机器人、技术与生活的个人记录。\n从行业观察出发，让思考落在具体的形象里。",
+    "button": "开始阅读"
+  },
+  "columns": [
+    {
+      "id": "research",
+      "title": "行业调研",
+      "english": "INDUSTRY RESEARCH",
+      "intro": "观察产业脉络，梳理技术路径。在具体问题里，寻找判断的依据。"
+    },
+    {
+      "id": "essays",
+      "title": "思想随笔",
+      "english": "NOTES & REFLECTIONS",
+      "intro": "记录尚在生长的想法。关于需求、产品，以及技术与人的关系。"
+    },
+    {
+      "id": "visions",
+      "title": "立象尽意",
+      "english": "IDEAS IN FORM",
+      "intro": "让想象有形，让想法可见。从生活场景到三维交互，探索机器人的更多可能。"
+    }
+  ],
+  "footer": {
+    "main": "个人主页",
+    "right": "观察 · 思考 · 实践"
+  }
+}
