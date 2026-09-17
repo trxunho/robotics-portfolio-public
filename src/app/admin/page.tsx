@@ -349,6 +349,40 @@ export default function AdminPage() {
             {busy ? "连接中…" : "连接并加载内容"}
           </button>
           {status && <div className={`${styles.status} ${styles[status.type]}`}>{status.msg}</div>}
+          <details style={{ marginTop: 14, fontSize: 13, lineHeight: 1.7 }}>
+            <summary style={{ cursor: "pointer", color: "#58a6ff" }}>不会生成令牌？点这里看详细步骤（两种方式任选其一）</summary>
+            <div style={{ marginTop: 8, opacity: 0.9 }}>
+              <p style={{ margin: "6px 0" }}>
+                <strong>方式一 · 经典令牌（最简单，推荐）</strong>
+              </p>
+              <ol style={{ margin: "0 0 10px 18px", padding: 0 }}>
+                <li>GitHub 头像 → Settings → Developer settings → Personal access tokens → <strong>Tokens (classic)</strong></li>
+                <li>Generate new token (classic)</li>
+                <li>勾选 <code>repo</code>（公开仓库勾 <code>public_repo</code> 也够）→ 生成 → 复制</li>
+              </ol>
+              <p style={{ margin: "6px 0" }}>
+                <strong>方式二 · 精细化令牌（Fine-grained）</strong>
+                <br />
+                <em>注意：「Read and write」不在勾选列表里，它是选完权限之后才出现的下拉项。</em>
+              </p>
+              <ol style={{ margin: "0 0 10px 18px", padding: 0 }}>
+                <li>Tokens (fine-grained) → Generate new token</li>
+                <li>Repository access 选 <strong>Only select repositories</strong> → 选中 <code>{auth.owner}/{auth.repo}</code></li>
+                <li>
+                  Permissions 里点 <strong>+ Add permissions</strong>，在搜索框输入 <code>Contents</code>，勾上 <strong>Contents</strong>，点面板底部的{" "}
+                  <strong>Add permissions</strong> 按钮
+                </li>
+                <li>
+                  回到 Permissions 表格，找到刚加进来的 <strong>Contents</strong> 行，把右侧下拉从 <strong>No access</strong> 改成{" "}
+                  <strong>Read and write</strong>
+                </li>
+                <li>Generate token → 复制（令牌只显示一次）</li>
+              </ol>
+              <p className={styles.muted} style={{ margin: "0 0 4px" }}>
+                两种方式都只需「该仓库」的读写权限；Metadata 是自动带的只读项，不用管。
+              </p>
+            </div>
+          </details>
           <p className={styles.muted} style={{ marginTop: 14 }}>
             令牌仅保存在当前浏览器会话（关闭标签页即清除），并直接用于访问 GitHub API，不会发送给任何第三方。
           </p>
