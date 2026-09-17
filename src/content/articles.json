@@ -1,0 +1,370 @@
+[
+  {
+    "slug": "research-01",
+    "category": "research",
+    "title": "家庭服务机器人主要的技术制约因素是什么，怎样突破",
+    "html": "<p>制约因素：开放家庭环境中的长时序、闭环、自主操作可靠性。</p><p>2026 年针对机器人灵巧手的综述明确指出，<strong>处理接触不确定性的闭环自适应控制仍是机器人最重要的未解决问题之一</strong><strong>。</strong></p><p>例如夹一个杯子，人类会同时获得：</p><p>视觉+手指压力+摩擦+微振动+关节位置+肌肉张力。</p><p>杯子开始滑动时，人甚至不需要看，几十毫秒就会自动加力。</p><p>机器人很多系统实际上仍然是：</p><p>相机看到物体 → AI预测动作 → 电机执行。</p><p>它缺失了人与现实世界接触时极其重要的高带宽反馈。</p><p>解决办法：真实家庭数据飞轮+视觉触觉多模态基础模型+长时序 Agent+失败恢复体系+安全柔顺硬件。</p>",
+    "media": [],
+    "summary": "制约因素：开放家庭环境中的长时序、闭环、自主操作可靠性。 2026 年针对机器人灵巧手的综述明确指出， 处理接触不确定性的闭环自适应控制仍是机器人最重要的未解决问题之一 。 例如夹一个杯子，…",
+    "minutes": 1
+  },
+  {
+    "slug": "research-02",
+    "category": "research",
+    "title": "灵心巧手在家庭服务机器人的布局",
+    "html": "<p>Linker Humanoid V2</p><p>2026 年 5 月，周永接受 WIRED 采访时把机器人落地大致分为三个阶段：</p><p><strong>娱乐/展示 → 饮料、烹饪、物流等有限任务 → 复杂家庭环境。</strong></p><p>他明确把家庭放在了最后一阶段。</p><p>家庭服务机器人关键基础技术已经进入 Demo→产品化的过渡期，而家庭整机仍处于早期。</p><p>2026 年 8 月，灵心巧手和渊澈太初 OriginFlow 签署战略合作协议</p><p>家庭场景应该是：战略方向 + 技术储备 + Demo验证 + 数据布局</p>",
+    "media": [],
+    "summary": "Linker Humanoid V2 2026 年 5 月，周永接受 WIRED 采访时把机器人落地大致分为三个阶段： 娱乐/展示 → 饮料、烹饪、物流等有限任务 → 复杂家庭环境。 他明确…",
+    "minutes": 1
+  },
+  {
+    "slug": "research-03",
+    "category": "research",
+    "title": "灵心巧手的行业壁垒：",
+    "html": "<p>1：高自由度灵巧手的可靠量产Know-how。</p><p>这是目前最现实的壁垒。它包含微型执行器、传动、公差、材料、控制、耐久、装配和质量体系。</p><p>2：核心微型执行部件 + 整手联合设计能力。</p><p>因为这使公司能够不断在重量、力量、成本、尺寸之间重新优化，而不是受制于标准供应链。</p><p>3：真实世界灵巧操作数据闭环。</p><p>今天它还处于早期；但如果未来LinkerSkillNet真的随着数万、数十万只手形成海量高质量数据，这一项有可能反过来超过硬件，成为最大的长期护城河。Reuters目前报道其技能库已有500多项技能。</p><p>卖“铲子”和“基础设施”的人。聚焦“手”是为了避免与宇树、Tesla 等整机厂正面竞争。</p>",
+    "media": [],
+    "summary": "1：高自由度灵巧手的可靠量产Know-how。 这是目前最现实的壁垒。它包含微型执行器、传动、公差、材料、控制、耐久、装配和质量体系。 2：核心微型执行部件 + 整手联合设计能力。 因为这使…",
+    "minutes": 1
+  },
+  {
+    "slug": "research-04",
+    "category": "research",
+    "title": "灵心巧手的风险：",
+    "html": "<div class=\"table-scroll\" data-columns=\"4\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /><col /><col /></colgroup><tbody><tr><th><p><strong>风险</strong></p></th><th><p><strong>被击穿概率</strong></p></th><th><p><strong>一旦发生的杀伤力</strong></p></th><th><p><strong>我的判断</strong></p></th></tr><tr><td><p>整机厂自研灵巧手</p></td><td><p>★★★★★</p></td><td><p>★★★★★</p></td><td><p><strong>最大风险</strong></p></td></tr><tr><td><p>触觉/接触智能出现代际突破</p></td><td><p>★★★★☆</p></td><td><p>★★★★★</p></td><td><p><strong>最可能的技术换代风险</strong></p></td></tr><tr><td><p>高自由度灵巧手并非大规模部署最优解</p></td><td><p>★★★★</p></td><td><p>★★★★★</p></td><td><p><strong>商业模式核心风险</strong></p></td></tr><tr><td><p>数据壁垒被跨本体学习削弱</p></td><td><p>★★★★</p></td><td><p>★★★★</p></td><td><p><strong>长期风险很大</strong></p></td></tr><tr><td><p>高估值倒逼高速增长</p></td><td><p>★★★☆</p></td><td><p>★★★★</p></td><td><p><strong>公司层面的风险</strong></p></td></tr></tbody></table></div>",
+    "media": [],
+    "summary": "风险 被击穿概率 一旦发生的杀伤力 我的判断 整机厂自研灵巧手 ★★★★★ ★★★★★ 最大风险 触觉/接触智能出现代际突破 ★★★★☆ ★★★★★ 最可能的技术换代风险 高自由度灵巧手并非…",
+    "minutes": 1
+  },
+  {
+    "slug": "research-05",
+    "category": "research",
+    "title": "灵心巧手供应链",
+    "html": "<p><strong>一、产业链总览</strong></p><p>上游核心零部件</p><p> ↓</p><p>空心杯电机 / 微型减速器 / 丝杠 / 腱绳 / 传感器 / 芯片</p><p> ↓</p><p>灵巧手本体企业</p><p> ↓</p><p>人形机器人厂商</p><p> ↓</p><p>工业、家庭、医疗、养老应用</p><p><strong>二、核心供应链拆解</strong></p><p><strong>1. 动力系统（最大硬件壁垒）</strong></p><p><strong>核心部件：</strong></p><p>空心杯电机 </p><p>微型无刷电机 </p><p>微型谐波减速器 </p><p>行星减速器 </p><p>微型丝杠 </p><p><strong>产业判断：</strong></p><p><strong>空心杯电机是灵巧手的“心脏”，目前仍是国产替代关键短板。</strong><br />海外企业在高端小型电机领域长期领先。</p><p><strong>代表企业：</strong></p><div class=\"table-scroll\" data-columns=\"2\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /></colgroup><tbody><tr><th><p><strong>企业</strong></p></th><th><p><strong>地位</strong></p></th></tr><tr><td><p>Maxon Motor</p></td><td><p>全球顶级空心杯电机供应商</p></td></tr><tr><td><p>Faulhaber</p></td><td><p>高端微电机龙头</p></td></tr><tr><td><p>鸣志电器</p></td><td><p>国产空心杯重要玩家</p></td></tr><tr><td><p>鼎智科技</p></td><td><p>微型传动布局</p></td></tr><tr><td><p>拓邦股份</p></td><td><p>微型电机布局</p></td></tr></tbody></table></div><p><strong>投资判断：</strong></p><p>电机企业可能成为人形机器人产业链中最确定的受益方向之一。</p><p><strong>2. 传动系统（决定“像不像人手”）</strong></p><p><strong>技术路线：</strong></p><div class=\"table-scroll\" data-columns=\"2\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /></colgroup><tbody><tr><th><p><strong>路线</strong></p></th><th><p><strong>特点</strong></p></th></tr><tr><td><p>腱绳驱动</p></td><td><p>最接近人体肌腱</p></td></tr><tr><td><p>微型丝杠</p></td><td><p>精度高、控制简单</p></td></tr><tr><td><p>谐波减速</p></td><td><p>扭矩密度高</p></td></tr><tr><td><p>直接驱动</p></td><td><p>灵敏但成本高</p></td></tr></tbody></table></div><p><strong>核心指标：</strong></p><p>手指自由度（DOF） </p><p>力矩密度 </p><p>背隙 </p><p>寿命 </p><p>噪音 </p><p><strong>判断：</strong></p><p><strong>未来量产路线大概率不是完全仿生，而是“工业可靠性+部分仿生”。</strong></p><p><strong>3. 触觉传感（未来最大机会）</strong></p><p><strong>当前状态：</strong></p><p>视觉已经成熟：</p><p>✅ 摄像头<br />✅ 深度视觉<br />✅ 力控算法</p><p>但是：</p><p>❌ 高密度触觉<br />❌ 柔性压力传感<br />❌ 温度/滑移感知</p><p>仍是瓶颈。</p><p><strong>主要方向：</strong></p><div class=\"table-scroll\" data-columns=\"2\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /></colgroup><tbody><tr><th><p><strong>技术</strong></p></th><th><p><strong>优势</strong></p></th></tr><tr><td><p>电阻式</p></td><td><p>成本低</p></td></tr><tr><td><p>电容式</p></td><td><p>灵敏度高</p></td></tr><tr><td><p>光学式</p></td><td><p>精度高</p></td></tr><tr><td><p>MEMS</p></td><td><p>可量产</p></td></tr></tbody></table></div><p><strong>代表企业：</strong></p><div class=\"table-scroll\" data-columns=\"2\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /></colgroup><tbody><tr><th><p><strong>企业</strong></p></th><th><p><strong>方向</strong></p></th></tr><tr><td><p>奥比中光</p></td><td><p>视觉感知</p></td></tr><tr><td><p>歌尔股份</p></td><td><p>传感器制造能力</p></td></tr><tr><td><p>韦尔股份</p></td><td><p>CMOS视觉芯片</p></td></tr></tbody></table></div>",
+    "media": [],
+    "summary": "一、产业链总览 上游核心零部件 ↓ 空心杯电机 / 微型减速器 / 丝杠 / 腱绳 / 传感器 / 芯片 ↓ 灵巧手本体企业 ↓ 人形机器人厂商 ↓ 工业、家庭、医疗、养老应用 二、核心供应…",
+    "minutes": 1
+  },
+  {
+    "slug": "research-06",
+    "category": "research",
+    "title": "灵巧手领域触觉传感器的供应商",
+    "html": "<p>目前灵巧手触觉传感器基本形成三条主路线：</p><div class=\"table-scroll\" data-columns=\"5\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /><col /><col /><col /></colgroup><tbody><tr><th><p><strong>路线</strong></p></th><th><p><strong>典型厂商</strong></p></th><th><p><strong>最大优势</strong></p></th><th><p><strong>主要短板</strong></p></th><th><p><strong>我对未来量产判断</strong></p></th></tr><tr><td><p><strong>磁式/Hall多维触觉阵列</strong></p></td><td><p>帕西尼、XELA</p></td><td><p>直接输出法向/切向力，数据量小、频率高、容易闭环控制</p></td><td><p>空间分辨率通常低于视触觉；磁干扰需要处理</p></td><td><p><strong>非常有竞争力，尤其适合大规模灵巧手</strong></p></td></tr><tr><td><p><strong>视触觉 GelSight 类</strong></p></td><td><p>戴盟、千觉、纬钛、叠动、GelSight</p></td><td><p>分辨率极高，可同时识别形貌、纹理、滑移、力场</p></td><td><p>摄像头+光学+弹性体带来体积、功耗、算力和寿命问题</p></td><td><p><strong>最适合指尖精细操作，很可能成为高端指尖主流</strong></p></td></tr><tr><td><p><strong>柔性压阻/电容电子皮肤</strong></p></td><td><p>墨现、汉威/能斯达、福莱新材、Tacterion</p></td><td><p>极薄、便宜、可大面积覆盖、容易贴合曲面</p></td><td><p>多数主要测压力，三维力、滑移、纹理能力较弱；存在迟滞/漂移</p></td><td><p><strong>最适合指腹、手掌、手背大面积覆盖</strong></p></td></tr></tbody></table></div><p>我认为最终胜出的并不太可能是某一种技术“全手通吃”，而更可能是：</p><p><strong>指尖高分辨率视触觉/多维力传感 + 指腹和掌面低成本柔性电子皮肤 + 腕部六维力传感器。</strong></p><p><strong>国际代表厂商与真实公开价格</strong><strong>：</strong></p><div class=\"table-scroll\" data-columns=\"5\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /><col /><col /><col /></colgroup><tbody><tr><th><p><strong>厂商</strong></p></th><th><p><strong>产品</strong></p></th><th><p><strong>路线</strong></p></th><th><p><strong>核心能力</strong></p></th><th><p><strong>当前公开售价</strong></p></th></tr><tr><td><p><strong>GelSight（美国）</strong></p></td><td><p>DIGIT</p></td><td><p>视触觉</p></td><td><p>机器人研究常用的紧凑型GelSight</p></td><td><p><strong>US$355</strong></p></td></tr><tr><td><p><strong>GelSight</strong></p></td><td><p>GelSight Mini</p></td><td><p>视触觉</p></td><td><p>高分辨率2D/3D形貌、USB即插即用</p></td><td><p><strong>US$510</strong></p></td></tr><tr><td><p><strong>XELA Robotics（日本）</strong></p></td><td><p>uSkin / uSCu / uSPa</p></td><td><p>分布式三轴触觉</p></td><td><p>每个taxel测X/Y/Z，最高500Hz、0.1gf级分辨率</p></td><td><p><strong>询价</strong></p></td></tr><tr><td><p><strong>Contactile（澳大利亚）</strong></p></td><td><p>PapillArray</p></td><td><p>光学/柔性柱阵列</p></td><td><p>每个柱测3D位移、3D力、振动，并判断摩擦和滑移</p></td><td><p><strong>询价</strong></p></td></tr><tr><td><p><strong>Tacterion（德国）</strong></p></td><td><p>plyon flex/stretch</p></td><td><p>电阻+电容</p></td><td><p>压力+触摸+接近觉；柔性/可拉伸</p></td><td><p><strong>DevKit €899</strong></p></td></tr><tr><td><p><strong>Touchlab（英国）</strong></p></td><td><p>Robot Fingertip / e-skin</p></td><td><p>柔性电子皮肤</p></td><td><p>官方称单taxel读取可达1kHz+，强调滑移感知</p></td><td><p><strong>询价</strong></p></td></tr></tbody></table></div>",
+    "media": [],
+    "summary": "目前灵巧手触觉传感器基本形成三条主路线： 路线 典型厂商 最大优势 主要短板 我对未来量产判断 磁式/Hall多维触觉阵列 帕西尼、XELA 直接输出法向/切向力，数据量小、频率高、容易闭环…",
+    "minutes": 2
+  },
+  {
+    "slug": "research-07",
+    "category": "research",
+    "title": "调研与技术路线分析框架",
+    "html": "<p><img src=\"/articles/research-figure-1.png\" alt=\"文章配图 1\" loading=\"lazy\" /></p>",
+    "media": [],
+    "summary": "",
+    "minutes": 1
+  },
+  {
+    "slug": "research-08",
+    "category": "research",
+    "title": "家庭服务机器人法律法规与标准总表",
+    "html": "<div class=\"table-scroll\" data-columns=\"6\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col style=\"width:48px\" /><col /><col style=\"width:80px\" /><col /><col /><col /></colgroup><tbody><tr><th><p><strong>编号</strong></p></th><th><p><strong>法律/标准</strong></p></th><th><p><strong>层级</strong></p></th><th><p><strong>主要监管对象</strong></p></th><th><p><strong>对家庭机器人影响</strong></p></th><th><p><strong>产品设计要求</strong></p></th></tr><tr><td><p>1</p></td><td><p>《产品质量法》</p></td><td><p>法律</p></td><td><p>所有商品</p></td><td><p>机器人必须安全可靠，不得存在缺陷</p></td><td><p>建立质量体系、可靠性测试、风险分析</p></td></tr><tr><td><p>2</p></td><td><p>《民法典·侵权责任编》产品责任</p></td><td><p>法律</p></td><td><p>产品缺陷造成损害</p></td><td><p>机器人撞伤、夹伤、烧伤可能承担责任</p></td><td><p>保留设计验证记录、安全测试记录</p></td></tr><tr><td><p>3</p></td><td><p>《消费者权益保护法》</p></td><td><p>法律</p></td><td><p>消费者购买使用</p></td><td><p>不得虚假宣传机器人能力</p></td><td><p>禁止宣传“替代保姆”“保证老人安全”等</p></td></tr><tr><td><p>4</p></td><td><p>《消费品召回管理暂行规定》</p></td><td><p>行政法规</p></td><td><p>缺陷消费品</p></td><td><p>机器人存在系统性安全问题需召回</p></td><td><p>建立OTA修复和召回机制</p></td></tr><tr><td><p>5</p></td><td><p>GB/T 41527-2022《家用和类似用途服务机器人安全通用要求》</p></td><td><p>国家标准</p></td><td><p>家庭服务机器人安全</p></td><td><p>家庭机器人核心安全参考标准</p></td><td><p>移动、防碰撞、电气、机械安全设计</p></td></tr><tr><td><p>6</p></td><td><p>GB/T 36530-2018《机器人与机器人装备 个人助理机器人的安全要求》</p></td><td><p>国家标准</p></td><td><p>个人助理机器人</p></td><td><p>人机共存机器人核心安全要求</p></td><td><p>近人体操作必须限制力量和速度</p></td></tr><tr><td><p>7</p></td><td><p>GB/T 41433-2022《家用和类似用途服务机器人消费者指导》</p></td><td><p>国家标准</p></td><td><p>消费者使用</p></td><td><p>指导产品说明、安全提示</p></td><td><p>用户手册、风险提示设计</p></td></tr><tr><td><p>8</p></td><td><p>GB/T 45502-2025《服务机器人信息安全通用要求》</p></td><td><p>国家标准</p></td><td><p>服务机器人网络安全</p></td><td><p>首个机器人信息安全专项标准</p></td><td><p>身份认证、加密、漏洞管理</p></td></tr></tbody></table></div>",
+    "media": [],
+    "summary": "编号 法律/标准 层级 主要监管对象 对家庭机器人影响 产品设计要求 1 《产品质量法》 法律 所有商品 机器人必须安全可靠，不得存在缺陷 建立质量体系、可靠性测试、风险分析 2 《民法典·…",
+    "minutes": 1
+  },
+  {
+    "slug": "research-09",
+    "category": "research",
+    "title": "风险分析",
+    "html": "<p>采用：</p><p>Severity（严重度） </p><p>Occurrence（发生概率） </p><p>Detection（探测能力） </p><p>Action Priority（行动优先级） </p><p>DFMEA风险表（一）</p><p>移动系统</p><div class=\"table-scroll\" data-columns=\"8\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /><col /><col /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:48px\" /></colgroup><tbody><tr><th><p><strong>功能</strong></p></th><th><p><strong>失效模式</strong></p></th><th><p><strong>原因</strong></p></th><th><p><strong>后果</strong></p></th><th><p><strong>S</strong></p></th><th><p><strong>O</strong></p></th><th><p><strong>D</strong></p></th><th><p><strong>AP</strong></p></th></tr><tr><td><p>自主移动</p></td><td><p>撞击老人</p></td><td><p>人体识别失败</p></td><td><p>跌倒骨折</p></td><td><p>10</p></td><td><p>3</p></td><td><p>6</p></td><td><p>高</p></td></tr><tr><td><p>自主移动</p></td><td><p>撞击儿童</p></td><td><p>速度控制错误</p></td><td><p>儿童受伤</p></td><td><p>10</p></td><td><p>2</p></td><td><p>6</p></td><td><p>高</p></td></tr><tr><td><p>越障</p></td><td><p>倾覆</p></td><td><p>地形判断错误</p></td><td><p>机器人砸人</p></td><td><p>9</p></td><td><p>3</p></td><td><p>7</p></td><td><p>高</p></td></tr><tr><td><p>夜间巡航</p></td><td><p>突然出现</p></td><td><p>无提示移动</p></td><td><p>惊吓老人</p></td><td><p>5</p></td><td><p>5</p></td><td><p>3</p></td><td><p>中</p></td></tr></tbody></table></div><p>DFMEA风险表（二）</p><p>灵巧手系统</p><div class=\"table-scroll\" data-columns=\"8\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /><col /><col /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:48px\" /></colgroup><tbody><tr><th><p><strong>功能</strong></p></th><th><p><strong>失效模式</strong></p></th><th><p><strong>原因</strong></p></th><th><p><strong>后果</strong></p></th><th><p><strong>S</strong></p></th><th><p><strong>O</strong></p></th><th><p><strong>D</strong></p></th><th><p><strong>AP</strong></p></th></tr><tr><td><p>抓取</p></td><td><p>夹伤人体</p></td><td><p>力控制失效</p></td><td><p>人体伤害</p></td><td><p>10</p></td><td><p>4</p></td><td><p>6</p></td><td><p>高</p></td></tr><tr><td><p>递送物品</p></td><td><p>掉落</p></td><td><p>抓力不足</p></td><td><p>物品损坏</p></td><td><p>5</p></td><td><p>5</p></td><td><p>3</p></td><td><p>低</p></td></tr><tr><td><p>老人辅助</p></td><td><p>支撑失败</p></td><td><p>力量不足</p></td><td><p>老人跌倒</p></td><td><p>10</p></td><td><p>3</p></td><td><p>8</p></td><td><p>高</p></td></tr><tr><td><p>按摩</p></td><td><p>压力过大</p></td><td><p>算法错误</p></td><td><p>身体伤害</p></td><td><p>8</p></td><td><p>3</p></td><td><p>6</p></td><td><p>中</p></td></tr></tbody></table></div><p>DFMEA风险表（三）</p><p>AI系统</p><p>这是传统FMEA没有重点覆盖，但机器人必须增加。</p><div class=\"table-scroll\" data-columns=\"8\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /><col /><col /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:48px\" /></colgroup><tbody><tr><th><p><strong>功能</strong></p></th><th><p><strong>失效模式</strong></p></th><th><p><strong>原因</strong></p></th><th><p><strong>后果</strong></p></th><th><p><strong>S</strong></p></th><th><p><strong>O</strong></p></th><th><p><strong>D</strong></p></th><th><p><strong>AP</strong></p></th></tr><tr><td><p>任务规划</p></td><td><p>错误任务理解</p></td><td><p>大模型幻觉</p></td><td><p>执行危险动作</p></td><td><p>10</p></td><td><p>5</p></td><td><p>8</p></td><td><p>高</p></td></tr><tr><td><p>视觉理解</p></td><td><p>错误识别物体</p></td><td><p>模型误判</p></td><td><p>抓错物品</p></td><td><p>8</p></td><td><p>5</p></td><td><p>6</p></td><td><p>高</p></td></tr><tr><td><p>自主决策</p></td><td><p>越权行动</p></td><td><p>权限不足</p></td><td><p>隐私/安全事故</p></td><td><p>10</p></td><td><p>3</p></td><td><p>8</p></td><td><p>高</p></td></tr></tbody></table></div><p>DFMEA风险表（四）</p><p>隐私系统</p><div class=\"table-scroll\" data-columns=\"8\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /><col /><col /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:48px\" /></colgroup><tbody><tr><th><p><strong>功能</strong></p></th><th><p><strong>失效模式</strong></p></th><th><p><strong>原因</strong></p></th><th><p><strong>后果</strong></p></th><th><p><strong>S</strong></p></th><th><p><strong>O</strong></p></th><th><p><strong>D</strong></p></th><th><p><strong>AP</strong></p></th></tr><tr><td><p>摄像头关闭</p></td><td><p>关闭失败</p></td><td><p>软件Bug</p></td><td><p>偷拍风险</p></td><td><p>10</p></td><td><p>3</p></td><td><p>8</p></td><td><p>高</p></td></tr><tr><td><p>视频上传</p></td><td><p>未经授权上传</p></td><td><p>权限漏洞</p></td><td><p>隐私泄露</p></td><td><p>10</p></td><td><p>3</p></td><td><p>8</p></td><td><p>高</p></td></tr><tr><td><p>儿童数据</p></td><td><p>保存过久</p></td><td><p>数据策略错误</p></td><td><p>儿童隐私风险</p></td><td><p>10</p></td><td><p>2</p></td><td><p>8</p></td><td><p>高</p></td></tr></tbody></table></div><p>DFMEA风险表（五）</p><p>厨房功能</p><div class=\"table-scroll\" data-columns=\"8\" role=\"region\" aria-label=\"文章表格\" tabindex=\"0\"><table><colgroup><col /><col /><col /><col /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:40px\" /><col style=\"width:48px\" /></colgroup><tbody><tr><th><p><strong>功能</strong></p></th><th><p><strong>失效模式</strong></p></th><th><p><strong>原因</strong></p></th><th><p><strong>后果</strong></p></th><th><p><strong>S</strong></p></th><th><p><strong>O</strong></p></th><th><p><strong>D</strong></p></th><th><p><strong>AP</strong></p></th></tr><tr><td><p>端早餐</p></td><td><p>液体倾倒</p></td><td><p>抓取失败</p></td><td><p>烫伤</p></td><td><p>10</p></td><td><p>4</p></td><td><p>6</p></td><td><p>高</p></td></tr><tr><td><p>煮粥</p></td><td><p>碰撞锅具</p></td><td><p>路径错误</p></td><td><p>火灾/烫伤</p></td><td><p>10</p></td><td><p>3</p></td><td><p>7</p></td><td><p>高</p></td></tr><tr><td><p>食品处理</p></td><td><p>污染</p></td><td><p>材料不合格</p></td><td><p>健康风险</p></td><td><p>8</p></td><td><p>3</p></td><td><p>6</p></td><td><p>中</p></td></tr></tbody></table></div>",
+    "media": [],
+    "summary": "采用： Severity（严重度） Occurrence（发生概率） Detection（探测能力） Action Priority（行动优先级） DFMEA风险表（一） 移动系统 功能 失…",
+    "minutes": 2
+  },
+  {
+    "slug": "research-10",
+    "category": "research",
+    "title": "浏览公司既有研究档案",
+    "html": "<p>例如关于手指数量和自由度数量对应能完成工作的评估记录等。</p>",
+    "media": [],
+    "summary": "例如关于手指数量和自由度数量对应能完成工作的评估记录等。",
+    "minutes": 1
+  },
+  {
+    "slug": "essays-01",
+    "category": "essays",
+    "title": "是否要从强需求入手？先解决哪些功能？",
+    "html": "<p>以现在的高成本和低性能来说，一般认为应从家庭服务场景的强需求功能入手，然而即使近期能够在较高价格的情况下完成个别强需求功能，还面临着与保姆的竞争，保姆是一揽子解决方案，可以解决各种长尾需求，而家庭服务机器人只能完成少数工作，属于保姆之外多出来的成本。我觉得解决的思路有两个，一个是将工作按类别拆分，让保姆端可以成块的减少工作量和时长，从而降低保姆薪酬；另一个思路是提供普通保姆无法提供的增量服务，形成差异化优势。比如智能对话可以调用手机相同级别的人工智能进行对话，且可以依据对话中的健康相关记忆完成日常提醒和个性化照护。再比如儿童陪护辅道、享乐方向的挠痒按摩等，这些方面的支出有些归属于用户的其他心理账户，有利于做出购买决策。</p>",
+    "media": [],
+    "summary": "以现在的高成本和低性能来说，一般认为应从家庭服务场景的强需求功能入手，然而即使近期能够在较高价格的情况下完成个别强需求功能，还面临着与保姆的竞争，保姆是一揽子解决方案，可以解决各种长尾需求，…",
+    "minutes": 1
+  },
+  {
+    "slug": "essays-02",
+    "category": "essays",
+    "title": "平台化转型思考",
+    "html": "<p>用户共创平台，统一软硬件接口，如提供驱动电机，开放接入数据和供电接口给用户配件，激励机制，拿出固定百分比奖励或者普通的固定数额奖金。</p><p>我认为未来专业领域的专业能力可能没那么容易获得，因为各专业人士会忌惮人工智能和机器人企业的数据采集，需要做到能够将技能包加密生成并分发，并给技能包持有人或企业分成，才能扩展业务，做平台生意，这其中，能对平台方和使用方不可破解的基础的技能包加密技术是必要条件。</p>",
+    "media": [],
+    "summary": "用户共创平台，统一软硬件接口，如提供驱动电机，开放接入数据和供电接口给用户配件，激励机制，拿出固定百分比奖励或者普通的固定数额奖金。 我认为未来专业领域的专业能力可能没那么容易获得，因为各专…",
+    "minutes": 1
+  },
+  {
+    "slug": "essays-03",
+    "category": "essays",
+    "title": "灵巧手能否成为残障人士义肢甚至人体增强器官？",
+    "html": "<p>灵心巧手已经在5月份并购京灵智康团队，可转换输入信号为神经特性信号，输出信号为触觉等传感器信号，让人能感受到义肢所触碰的环境，甚至配备技能包。</p><p>短期不是好赛道，因为注册认证、临床验证周期、医院渠道都不是简单问题。可做相关企业供应商。</p><p>对手为强脑科技，脑机接口较强。这方面 追赶困难，需要解决数据来源问题。</p><p>二者竞争的结果可能在于是机器人智能方面发展更快还是脑机接口方面发展更快。这决定了是让机器自己干活还是由人操作机器干活。</p><p>但脑机接口技术投入生产时仍受限于真人操作，而机器人智能终将超越人类操作，所以终局仍是完全机器智能一方，而非人体增强一方。后者的市场空间预计相对更小。</p>",
+    "media": [],
+    "summary": "灵心巧手已经在5月份并购京灵智康团队，可转换输入信号为神经特性信号，输出信号为触觉等传感器信号，让人能感受到义肢所触碰的环境，甚至配备技能包。 短期不是好赛道，因为注册认证、临床验证周期、医…",
+    "minutes": 1
+  },
+  {
+    "slug": "essays-04",
+    "category": "essays",
+    "title": "充分利用灵巧手细分领域优势拓展业务范围",
+    "html": "<p>半导体设备维护</p><p>核/聚变远程维护</p><p>航天器维修</p><p>航空航天/复杂工业线束与连接器</p><p>高可靠电子返修。</p><p>共同特点：人工技能高、失败成本高、作业环境复杂、设备为人手设计、任务种类又多到不值得给每一种动作制造专用机械。</p>",
+    "media": [],
+    "summary": "半导体设备维护 核/聚变远程维护 航天器维修 航空航天/复杂工业线束与连接器 高可靠电子返修。 共同特点：人工技能高、失败成本高、作业环境复杂、设备为人手设计、任务种类又多到不值得给每一种动…",
+    "minutes": 1
+  },
+  {
+    "slug": "essays-05",
+    "category": "essays",
+    "title": "他山之石",
+    "html": "<p>可研究非灵巧手的灵巧操作类产品，例如Lam Research 的 Dextro，达芬奇手术机器人等，生物科学和医学试验用操作机械等。研究他们的感知和动作控制系统的逻辑、供应商、论文、专利等，借鉴到灵巧手领域。</p>",
+    "media": [],
+    "summary": "可研究非灵巧手的灵巧操作类产品，例如Lam Research 的 Dextro，达芬奇手术机器人等，生物科学和医学试验用操作机械等。研究他们的感知和动作控制系统的逻辑、供应商、论文、专利等，…",
+    "minutes": 1
+  },
+  {
+    "slug": "essays-06",
+    "category": "essays",
+    "title": "模仿自动驾驶发展路径，困难场景真人遥控是否可行？",
+    "html": "<p>可行，渐进式发展有利于取得海量数据，且大多数家务可以“先停住再处理”，没有汽车高速行驶时那么严格的实时性要求。</p><p>1X 的 NEO 基本就是这一思路。</p><p>区别：Waymo 的人主要提供建议，并不远程开车；家庭机器人如果真人直接控制双手去叠衣服、开包装、拿餐具，对网络和操作员能力的要求高得多。家庭服务机器人能否做到仅提供建议？</p><p>人工介入率是商业模式成败的关键指标。</p><p>解决方法：分级协助，从语音告知操作要点，到手动完成初始动作，到完全远程遥控。</p><p>另一个问题：隐私</p><p>可以通过人物及屏幕自动模糊、本地视频脱敏、操作员只能看到完成任务所需视角、无法随意转头查看房间、端到端加密、禁止私人手机录屏、所有访问留日志。</p><p>意外收获：成为家庭服务技能数据标注公司，自用及出售训练数据。</p>",
+    "media": [],
+    "summary": "可行，渐进式发展有利于取得海量数据，且大多数家务可以“先停住再处理”，没有汽车高速行驶时那么严格的实时性要求。 1X 的 NEO 基本就是这一思路。 区别：Waymo 的人主要提供建议，并不…",
+    "minutes": 1
+  },
+  {
+    "slug": "essays-07",
+    "category": "essays",
+    "title": "产品逻辑",
+    "html": "<p>家庭需求地图 → 任务拆解 → 原子技能库 → LinkerSkillStore → 家政数据采集 → 安全等级 → 硬件配置 → MVP功能 → 用户测试 → OTA技能扩展 → 商业模式</p>",
+    "media": [],
+    "summary": "家庭需求地图 → 任务拆解 → 原子技能库 → LinkerSkillStore → 家政数据采集 → 安全等级 → 硬件配置 → MVP功能 → 用户测试 → OTA技能扩展 → 商业模式",
+    "minutes": 1
+  },
+  {
+    "slug": "visions-01",
+    "category": "visions",
+    "title": "隐私保护：红外摄像头",
+    "summary": "1 段视频",
+    "html": "",
+    "minutes": 0,
+    "media": [
+      {
+        "kind": "video",
+        "src": "/articles/visions-01/01.mp4",
+        "alt": "红外摄像头 · 画面 1"
+      }
+    ]
+  },
+  {
+    "slug": "visions-02",
+    "category": "visions",
+    "title": "隐私保护：磨砂玻璃",
+    "summary": "4 张场景图 / 1 段视频",
+    "html": "",
+    "minutes": 0,
+    "media": [
+      {
+        "kind": "image",
+        "src": "/articles/visions-02/01.png",
+        "alt": "磨砂玻璃 · 画面 1"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-02/02.png",
+        "alt": "磨砂玻璃 · 画面 2"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-02/03.png",
+        "alt": "磨砂玻璃 · 画面 3"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-02/04.png",
+        "alt": "磨砂玻璃 · 画面 4"
+      },
+      {
+        "kind": "video",
+        "src": "/articles/visions-02/05.mp4",
+        "alt": "磨砂玻璃 · 画面 5"
+      }
+    ]
+  },
+  {
+    "slug": "visions-03",
+    "category": "visions",
+    "title": "准备早餐",
+    "summary": "5 张场景图 / 1 段视频",
+    "html": "",
+    "minutes": 0,
+    "media": [
+      {
+        "kind": "image",
+        "src": "/articles/visions-03/01.png",
+        "alt": "准备早餐 · 画面 1"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-03/02.png",
+        "alt": "准备早餐 · 画面 2"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-03/03.png",
+        "alt": "准备早餐 · 画面 3"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-03/04.png",
+        "alt": "准备早餐 · 画面 4"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-03/05.png",
+        "alt": "准备早餐 · 画面 5"
+      },
+      {
+        "kind": "video",
+        "src": "/articles/visions-03/06.mp4",
+        "alt": "准备早餐 · 画面 6"
+      }
+    ]
+  },
+  {
+    "slug": "visions-04",
+    "category": "visions",
+    "title": "取快递",
+    "summary": "3 张场景图",
+    "html": "",
+    "minutes": 0,
+    "media": [
+      {
+        "kind": "image",
+        "src": "/articles/visions-04/01.png",
+        "alt": "取快递 · 画面 1"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-04/02.png",
+        "alt": "取快递 · 画面 2"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-04/03.png",
+        "alt": "取快递 · 画面 3"
+      }
+    ]
+  },
+  {
+    "slug": "visions-05",
+    "category": "visions",
+    "title": "辅导陪伴孩子",
+    "summary": "4 张场景图",
+    "html": "",
+    "minutes": 0,
+    "media": [
+      {
+        "kind": "image",
+        "src": "/articles/visions-05/01.png",
+        "alt": "辅导陪伴孩子 · 画面 1"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-05/02.png",
+        "alt": "辅导陪伴孩子 · 画面 2"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-05/03.png",
+        "alt": "辅导陪伴孩子 · 画面 3"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-05/04.png",
+        "alt": "辅导陪伴孩子 · 画面 4"
+      }
+    ]
+  },
+  {
+    "slug": "visions-06",
+    "category": "visions",
+    "title": "多功能配件",
+    "summary": "4 张场景图 / 1 段视频",
+    "html": "",
+    "minutes": 0,
+    "media": [
+      {
+        "kind": "image",
+        "src": "/articles/visions-06/01.png",
+        "alt": "多功能配件 · 画面 1"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-06/02.png",
+        "alt": "多功能配件 · 画面 2"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-06/03.png",
+        "alt": "多功能配件 · 画面 3"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-06/04.png",
+        "alt": "多功能配件 · 画面 4"
+      },
+      {
+        "kind": "video",
+        "src": "/articles/visions-06/05.mp4",
+        "alt": "多功能配件 · 画面 5"
+      }
+    ]
+  },
+  {
+    "slug": "visions-07",
+    "category": "visions",
+    "title": "另辟蹊径：挠痒",
+    "summary": "5 张场景图",
+    "html": "",
+    "minutes": 0,
+    "media": [
+      {
+        "kind": "image",
+        "src": "/articles/visions-07/01.png",
+        "alt": "挠痒 · 画面 1"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-07/02.png",
+        "alt": "挠痒 · 画面 2"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-07/03.png",
+        "alt": "挠痒 · 画面 3"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-07/04.png",
+        "alt": "挠痒 · 画面 4"
+      },
+      {
+        "kind": "image",
+        "src": "/articles/visions-07/05.png",
+        "alt": "挠痒 · 画面 5"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1307 @@
+{
+  "model": "L20",
+  "hand": "right",
+  "source_commit": "075cc7d42cc1e756bdcbece0fc069a0779fc5237",
+  "asset_revision": "official URDF snapshot; hardware revision unspecified",
+  "retrieved": "2026-09-14",
+  "source": "https://github.com/linker-bot/linkerhand-urdf",
+  "license": "Apache-2.0",
+  "links": [
+    {
+      "id": "base_link",
+      "name": "掌部与腕部",
+      "group": "palm",
+      "mesh": "meshes/base_link.STL",
+      "triangles": 50832,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.037394050508737564,
+          -0.055465761572122574,
+          -6.761572191038567e-09
+        ],
+        [
+          0.031999994069337845,
+          0.05074423924088478,
+          0.16892962157726288
+        ]
+      ]
+    },
+    {
+      "id": "pinky_metacarpals",
+      "name": "小指 · 掌指基座",
+      "group": "pinky",
+      "mesh": "meshes/pinky_metacarpals.STL",
+      "triangles": 1524,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "BlackAccent",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -9.500076703261584e-05,
+          -0.008499438874423504,
+          -0.0030000002589076757
+        ],
+        [
+          0.019674822688102722,
+          0.008499407209455967,
+          0.010326780378818512
+        ]
+      ]
+    },
+    {
+      "id": "pinky_proximal",
+      "name": "小指 · 近节指骨",
+      "group": "pinky",
+      "mesh": "meshes/pinky_proximal.STL",
+      "triangles": 16146,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.010869952850043774,
+          -0.008473020978271961,
+          -0.004766182042658329
+        ],
+        [
+          0.010918763466179371,
+          0.008499431423842907,
+          0.04800986498594284
+        ]
+      ]
+    },
+    {
+      "id": "pinky_middle",
+      "name": "小指 · 中节指骨",
+      "group": "pinky",
+      "mesh": "meshes/pinky_middle.STL",
+      "triangles": 16092,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.00992430467158556,
+          -0.008203490637242794,
+          -0.0027583716437220573
+        ],
+        [
+          0.009376185946166515,
+          0.008182168938219547,
+          0.03394613042473793
+        ]
+      ]
+    },
+    {
+      "id": "pinky_distal",
+      "name": "小指 · 远节指骨",
+      "group": "pinky",
+      "mesh": "meshes/pinky_distal.STL",
+      "triangles": 18850,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.018445199355483055,
+          -0.007716837804764509,
+          -0.011431300081312656
+        ],
+        [
+          0.002815193496644497,
+          0.007691350299865007,
+          0.023063533008098602
+        ]
+      ]
+    },
+    {
+      "id": "ring_metacarpals",
+      "name": "无名指 · 掌指基座",
+      "group": "ring",
+      "mesh": "meshes/ring_metacarpals.STL",
+      "triangles": 1524,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "BlackAccent",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -9.500076703261584e-05,
+          -0.0084999930113554,
+          -0.002999961841851473
+        ],
+        [
+          0.019674822688102722,
+          0.00849885307252407,
+          0.010326819494366646
+        ]
+      ]
+    },
+    {
+      "id": "ring_proximal",
+      "name": "无名指 · 近节指骨",
+      "group": "ring",
+      "mesh": "meshes/ring_proximal.STL",
+      "triangles": 16146,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.010869952850043774,
+          -0.008486230857670307,
+          -0.004766182042658329
+        ],
+        [
+          0.010918763466179371,
+          0.008486221544444561,
+          0.04800986498594284
+        ]
+      ]
+    },
+    {
+      "id": "ring_middle",
+      "name": "无名指 · 中节指骨",
+      "group": "ring",
+      "mesh": "meshes/ring_middle.STL",
+      "triangles": 16090,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.00992430467158556,
+          -0.008203497156500816,
+          -0.0027583735063672066
+        ],
+        [
+          0.009376185946166515,
+          0.008182177320122719,
+          0.03394613415002823
+        ]
+      ]
+    },
+    {
+      "id": "ring_distal",
+      "name": "无名指 · 远节指骨",
+      "group": "ring",
+      "mesh": "meshes/ring_distal.STL",
+      "triangles": 18850,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.018445197492837906,
+          -0.007716837804764509,
+          -0.011431301012635231
+        ],
+        [
+          0.002815193496644497,
+          0.007691350299865007,
+          0.023063529282808304
+        ]
+      ]
+    },
+    {
+      "id": "middle_metacarpals",
+      "name": "中指 · 掌指基座",
+      "group": "middle",
+      "mesh": "meshes/middle_metacarpals.STL",
+      "triangles": 1524,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "BlackAccent",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -9.500076703261584e-05,
+          -0.0084999930113554,
+          -0.002999961841851473
+        ],
+        [
+          0.019674822688102722,
+          0.00849885307252407,
+          0.010326819494366646
+        ]
+      ]
+    },
+    {
+      "id": "middle_proximal",
+      "name": "中指 · 近节指骨",
+      "group": "middle",
+      "mesh": "meshes/middle_proximal.STL",
+      "triangles": 16146,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.010869952850043774,
+          -0.008486230857670307,
+          -0.004766182042658329
+        ],
+        [
+          0.010918763466179371,
+          0.008486221544444561,
+          0.04800986498594284
+        ]
+      ]
+    },
+    {
+      "id": "middle_middle",
+      "name": "中指 · 中节指骨",
+      "group": "middle",
+      "mesh": "meshes/middle_middle.STL",
+      "triangles": 16090,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.009924306534230709,
+          -0.00820348970592022,
+          -0.0027583737391978502
+        ],
+        [
+          0.009376184083521366,
+          0.008182169869542122,
+          0.03394613042473793
+        ]
+      ]
+    },
+    {
+      "id": "middle_distal",
+      "name": "中指 · 远节指骨",
+      "group": "middle",
+      "mesh": "meshes/middle_distal.STL",
+      "triangles": 18850,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.018445197492837906,
+          -0.007716837804764509,
+          -0.011431300081312656
+        ],
+        [
+          0.002815193496644497,
+          0.007691350299865007,
+          0.023063531145453453
+        ]
+      ]
+    },
+    {
+      "id": "index_metacarpals",
+      "name": "食指 · 掌指基座",
+      "group": "index",
+      "mesh": "meshes/index_metacarpals.STL",
+      "triangles": 1524,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "BlackAccent",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -9.500076703261584e-05,
+          -0.0084999930113554,
+          -0.002999961841851473
+        ],
+        [
+          0.019674822688102722,
+          0.00849885307252407,
+          0.010326819494366646
+        ]
+      ]
+    },
+    {
+      "id": "index_proximal",
+      "name": "食指 · 近节指骨",
+      "group": "index",
+      "mesh": "meshes/index_proximal.STL",
+      "triangles": 16146,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.010869952850043774,
+          -0.008473020978271961,
+          -0.004766182042658329
+        ],
+        [
+          0.010918763466179371,
+          0.008499431423842907,
+          0.04800986498594284
+        ]
+      ]
+    },
+    {
+      "id": "index_middle",
+      "name": "食指 · 中节指骨",
+      "group": "index",
+      "mesh": "meshes/index_middle.STL",
+      "triangles": 16086,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.009924307465553284,
+          -0.008203496225178242,
+          -0.0027583709452301264
+        ],
+        [
+          0.00937618687748909,
+          0.0081821633502841,
+          0.03394613042473793
+        ]
+      ]
+    },
+    {
+      "id": "index_distal",
+      "name": "食指 · 远节指骨",
+      "group": "index",
+      "mesh": "meshes/index_distal.STL",
+      "triangles": 18850,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.018445197492837906,
+          -0.007716837804764509,
+          -0.011431300081312656
+        ],
+        [
+          0.002815193496644497,
+          0.007691350299865007,
+          0.023063527420163155
+        ]
+      ]
+    },
+    {
+      "id": "thumb_metacarpals_base1",
+      "name": "拇指 · 旋转基座",
+      "group": "thumb",
+      "mesh": "meshes/thumb_metacarpals_base1.STL",
+      "triangles": 11196,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "BlackAccent",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.020198607817292213,
+          -0.004900000989437103,
+          -0.029101602733135223
+        ],
+        [
+          0.029122019186615944,
+          0.024603530764579773,
+          0.02913646586239338
+        ]
+      ]
+    },
+    {
+      "id": "thumb_metacarpals_base2",
+      "name": "拇指 · 侧摆基座",
+      "group": "thumb",
+      "mesh": "meshes/thumb_metacarpals_base2.STL",
+      "triangles": 5720,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "BlackAccent",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.010484420694410801,
+          -0.014314485713839531,
+          -0.010499889962375164
+        ],
+        [
+          0.013008138164877892,
+          0.013359533622860909,
+          0.03329429402947426
+        ]
+      ]
+    },
+    {
+      "id": "thumb_metacarpals",
+      "name": "拇指 · 掌指基座",
+      "group": "thumb",
+      "mesh": "meshes/thumb_metacarpals.STL",
+      "triangles": 21502,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.010813619941473007,
+          -0.015448820777237415,
+          -0.010327603667974472
+        ],
+        [
+          0.02450530230998993,
+          0.015455756336450577,
+          0.06376871466636658
+        ]
+      ]
+    },
+    {
+      "id": "thumb_proximal",
+      "name": "拇指 · 近节指骨",
+      "group": "thumb",
+      "mesh": "meshes/thumb_proximal.STL",
+      "triangles": 13592,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.014206361025571823,
+          -0.009503495879471302,
+          -0.008144539780914783
+        ],
+        [
+          0.011223412118852139,
+          0.009618434123694897,
+          0.0345960296690464
+        ]
+      ]
+    },
+    {
+      "id": "thumb_distal",
+      "name": "拇指 · 远节指骨",
+      "group": "thumb",
+      "mesh": "meshes/thumb_distal.STL",
+      "triangles": 22147,
+      "origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "material": "silver",
+      "source": "official_urdf",
+      "confidence": "verified",
+      "bounds": [
+        [
+          -0.01558799110352993,
+          -0.00911998562514782,
+          -0.006499356124550104
+        ],
+        [
+          0.004440805874764919,
+          0.009119996801018715,
+          0.03200516849756241
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "id": "pinky_mcp_roll",
+      "parent": "base_link",
+      "child": "pinky_metacarpals",
+      "origin": {
+        "xyz": [
+          -0.028576,
+          -0.038102,
+          0.15031
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "lower": -0.17,
+      "upper": 0.17,
+      "mimic": null
+    },
+    {
+      "id": "pinky_mcp_pitch",
+      "parent": "pinky_metacarpals",
+      "child": "pinky_proximal",
+      "origin": {
+        "xyz": [
+          0.016675,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": null
+    },
+    {
+      "id": "pinky_pip",
+      "parent": "pinky_proximal",
+      "child": "pinky_middle",
+      "origin": {
+        "xyz": [
+          -0.00419455244191127,
+          1.32099958100595e-05,
+          0.0448194355633776
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.57,
+      "mimic": null
+    },
+    {
+      "id": "pinky_dip",
+      "parent": "pinky_middle",
+      "child": "pinky_distal",
+      "origin": {
+        "xyz": [
+          0.0027556,
+          0.0,
+          0.031702
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": {
+        "joint": "pinky_pip",
+        "multiplier": 0.8917,
+        "offset": 0.0
+      }
+    },
+    {
+      "id": "ring_mcp_roll",
+      "parent": "base_link",
+      "child": "ring_metacarpals",
+      "origin": {
+        "xyz": [
+          -0.032199,
+          -0.016502,
+          0.15931
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "lower": -0.17,
+      "upper": 0.17,
+      "mimic": null
+    },
+    {
+      "id": "ring_mcp_pitch",
+      "parent": "ring_metacarpals",
+      "child": "ring_proximal",
+      "origin": {
+        "xyz": [
+          0.016675,
+          1.2656e-05,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": null
+    },
+    {
+      "id": "ring_pip",
+      "parent": "ring_proximal",
+      "child": "ring_middle",
+      "origin": {
+        "xyz": [
+          -0.00419455244174995,
+          0.0,
+          0.0448194355645609
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.57,
+      "mimic": null
+    },
+    {
+      "id": "ring_dip",
+      "parent": "ring_middle",
+      "child": "ring_distal",
+      "origin": {
+        "xyz": [
+          0.00275561956405355,
+          0.0,
+          0.0317024252327154
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": {
+        "joint": "ring_pip",
+        "multiplier": 0.8917,
+        "offset": 0.0
+      }
+    },
+    {
+      "id": "middle_mcp_roll",
+      "parent": "base_link",
+      "child": "middle_metacarpals",
+      "origin": {
+        "xyz": [
+          -0.0345042006792679,
+          0.00509811417717426,
+          0.163804307612682
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.999999999998204,
+        0.0,
+        0.0
+      ],
+      "lower": -0.17,
+      "upper": 0.17,
+      "mimic": null
+    },
+    {
+      "id": "middle_mcp_pitch",
+      "parent": "middle_metacarpals",
+      "child": "middle_proximal",
+      "origin": {
+        "xyz": [
+          0.0166748095398548,
+          1.26556862705962e-05,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": null
+    },
+    {
+      "id": "middle_pip",
+      "parent": "middle_proximal",
+      "child": "middle_middle",
+      "origin": {
+        "xyz": [
+          -0.00419455244189623,
+          0.0,
+          0.0448194355665477
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.57,
+      "mimic": null
+    },
+    {
+      "id": "middle_dip",
+      "parent": "middle_middle",
+      "child": "middle_distal",
+      "origin": {
+        "xyz": [
+          0.00275561956368908,
+          0.0,
+          0.031702425228504
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": {
+        "joint": "middle_pip",
+        "multiplier": 0.8917,
+        "offset": 0.0
+      }
+    },
+    {
+      "id": "index_mcp_roll",
+      "parent": "base_link",
+      "child": "index_metacarpals",
+      "origin": {
+        "xyz": [
+          -0.0297703583048348,
+          0.026698113515616,
+          0.159311418025823
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.999999999998204,
+        0.0,
+        0.0
+      ],
+      "lower": -0.17,
+      "upper": 0.17,
+      "mimic": null
+    },
+    {
+      "id": "index_mcp_pitch",
+      "parent": "index_metacarpals",
+      "child": "index_proximal",
+      "origin": {
+        "xyz": [
+          0.0166748095646496,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": null
+    },
+    {
+      "id": "index_pip",
+      "parent": "index_proximal",
+      "child": "index_middle",
+      "origin": {
+        "xyz": [
+          -0.00419455239160021,
+          1.32099983796707e-05,
+          0.0448194355727413
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.57,
+      "mimic": null
+    },
+    {
+      "id": "index_dip",
+      "parent": "index_middle",
+      "child": "index_distal",
+      "origin": {
+        "xyz": [
+          0.00275561951363186,
+          0.0,
+          0.0317024252223218
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": {
+        "joint": "index_pip",
+        "multiplier": 0.8917,
+        "offset": 0.0
+      }
+    },
+    {
+      "id": "thumb_cmc_yaw",
+      "parent": "base_link",
+      "child": "thumb_metacarpals_base1",
+      "origin": {
+        "xyz": [
+          0.0039847,
+          0.0050818,
+          0.057392
+        ],
+        "rpy": [
+          3.1416,
+          0.0,
+          1.5708
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.4,
+      "mimic": null
+    },
+    {
+      "id": "thumb_cmc_roll",
+      "parent": "thumb_metacarpals_base1",
+      "child": "thumb_metacarpals_base2",
+      "origin": {
+        "xyz": [
+          0.000784740002368223,
+          0.0196077603627024,
+          0.000308721957079858
+        ],
+        "rpy": [
+          1.18264333118745,
+          0.0,
+          1.57079632679503
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.22,
+      "mimic": null
+    },
+    {
+      "id": "thumb_cmc_pitch",
+      "parent": "thumb_metacarpals_base2",
+      "child": "thumb_metacarpals",
+      "origin": {
+        "xyz": [
+          -0.000109690908352875,
+          -0.00396440679180957,
+          0.0307945044045898
+        ],
+        "rpy": [
+          0.0,
+          0.388152995607441,
+          -1.57079632624948
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.79,
+      "mimic": null
+    },
+    {
+      "id": "thumb_mcp",
+      "parent": "thumb_metacarpals",
+      "child": "thumb_proximal",
+      "origin": {
+        "xyz": [
+          0.00857856380171737,
+          0.0,
+          0.0555715948082196
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.05,
+      "mimic": null
+    },
+    {
+      "id": "thumb_dip",
+      "parent": "thumb_proximal",
+      "child": "thumb_distal",
+      "origin": {
+        "xyz": [
+          0.0066653832125308,
+          0.0,
+          0.0342561774516276
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 1.22,
+      "mimic": {
+        "joint": "thumb_mcp",
+        "multiplier": 1.1619,
+        "offset": 0.0
+      }
+    }
+  ],
+  "bytes": 11092776
+}
