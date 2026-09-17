@@ -159,13 +159,7 @@
     "summary": "1 段视频",
     "html": "",
     "minutes": 0,
-    "media": [
-      {
-        "kind": "video",
-        "src": "/articles/visions-01/01.mp4",
-        "alt": "红外摄像头 · 画面 1"
-      }
-    ]
+    "media": []
   },
   {
     "slug": "visions-02",
@@ -324,6 +318,11 @@
         "kind": "image",
         "src": "/articles/visions-06/04.png",
         "alt": "多功能配件 · 画面 4"
+      },
+      {
+        "kind": "video",
+        "src": "/articles/visions-06/9-17-.mp4",
+        "alt": "9月17日.mp4"
       }
     ]
   },
