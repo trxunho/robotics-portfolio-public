@@ -122,6 +122,17 @@ export default function AdminPage() {
       await gh("/user");
       const b = await getBase();
       setBase(b);
+      let repoInfo: any = null;
+      try {
+        repoInfo = await gh<any>(`/repos/${auth.owner}/${auth.repo}`);
+      } catch (e: any) {
+        throw new Error("无法读取仓库「" + auth.owner + "/" + auth.repo + "」：" + (e?.message || e) + "。请确认仓库名/分支正确，且令牌有该仓库访问权限。");
+      }
+      if (!repoInfo?.permissions?.push) {
+        throw new Error(
+          "该令牌没有此仓库的写入权限，无法保存。解决：① 经典 PAT 勾选 repo（公开仓库也可用 public_repo）作用域；② 精细化令牌(fine-grained)需在 trxunho/robotics-portfolio-public 授予 Contents: Read and write。当前令牌仅能读取。"
+        );
+      }
       const a = await gh<any>(`/repos/${auth.owner}/${auth.repo}/contents/${CONTENT_DIR}/articles.json`);
       const s = await gh<any>(`/repos/${auth.owner}/${auth.repo}/contents/${CONTENT_DIR}/site.json`);
       setArticlesData(JSON.parse(decodeBase64(a.content)));
@@ -130,7 +141,12 @@ export default function AdminPage() {
       setPhase("app");
       setStatus(null);
     } catch (e: any) {
-      setStatus({ type: "err", msg: "连接失败：" + (e?.message || e) });
+      const m = e?.message || String(e);
+      if (/Resource not accessible|not accessible by personal access token/i.test(m)) {
+        setStatus({ type: "err", msg: "连接失败：令牌无权访问该仓库。请使用具备 repo（或 public_repo）作用域的 PAT；若用精细化令牌，需在 trxunho/robotics-portfolio-public 授予 Contents: Read and write。" });
+      } else {
+        setStatus({ type: "err", msg: "连接失败：" + m });
+      }
     } finally {
       setBusy(false);
     }
@@ -275,7 +291,12 @@ export default function AdminPage() {
         msg: "已保存到 GitHub ✓ 提交成功，GitHub Pages 正在自动重新部署（约 1–2 分钟）。如需把更改同步到 WorkBuddy 国内站点，告诉我「同步」即可。",
       });
     } catch (e: any) {
-      setStatus({ type: "err", msg: "保存失败：" + (e?.message || e) });
+      const m = e?.message || String(e);
+      if (/Resource not accessible|not accessible by personal access token/i.test(m)) {
+        setStatus({ type: "err", msg: "保存失败：你的 PAT 没有写入权限，无法提交。请改用具备 repo（或 public_repo）作用域的令牌；若用精细化令牌(fine-grained)，需在 trxunho/robotics-portfolio-public 授予 Contents: Read and write。" });
+      } else {
+        setStatus({ type: "err", msg: "保存失败：" + m });
+      }
     } finally {
       setBusy(false);
     }
