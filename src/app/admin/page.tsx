@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { columns } from "@/content/articles";
+import { STATS_ENDPOINT, isStatsConfigured } from "@/lib/stats-config";
 import styles from "./admin.module.css";
 
 type Media = { kind: "image" | "video"; src: string; alt?: string };
@@ -22,7 +23,7 @@ type SiteData = {
 type Auth = { token: string; owner: string; repo: string; branch: string };
 type Base = { refSha: string; commitSha: string; treeSha: string };
 type Pending = { id: string; slug: string; file: File; kind: "image" | "video"; alt: string; filename: string; url: string };
-type Selected = { kind: "site" } | { kind: "article"; slug: string } | { kind: "new"; category: string; slug: string };
+type Selected = { kind: "site" } | { kind: "article"; slug: string } | { kind: "new"; category: string; slug: string } | { kind: "stats" };
 type Status = { type: "ok" | "err" | "busy"; msg: string } | null;
 
 const API = "https://api.github.com";
@@ -450,6 +451,12 @@ export default function AdminPage() {
               ⚙ 站点文字
             </button>
           </div>
+
+          <div className={styles.navGroup}>
+            <button className={`${styles.navItem} ${selected.kind === "stats" ? styles.active : ""}`} onClick={() => setSelected({ kind: "stats" })}>
+              📊 访问统计
+            </button>
+          </div>
           {columns.map((c) => {
             const list = articlesData.filter((a) => a.category === c.id);
             return (
@@ -493,6 +500,8 @@ export default function AdminPage() {
               onRemoveCommitted={(i) => removeCommittedMedia(currentArticle.slug, i)}
             />
           )}
+
+          {selected.kind === "stats" && <StatsViewer />}
         </main>
       </div>
     </div>
@@ -715,4 +724,242 @@ function ArticleEditor({
       )}
     </>
   );
+}
+
+type StatsData = {
+  total: number;
+  unique: number;
+  range: number;
+  daily: { day: string; c: number }[];
+  regions: { country: string; region: string; city: string; c: number }[];
+  paths: { path: string; c: number }[];
+  referrers: { referrer: string; c: number }[];
+  recent: { ts: number; ip: string; country: string; region: string; city: string; path: string; referrer: string }[];
+};
+
+function StatsViewer() {
+  const [token, setToken] = useState<string>(() => sessionStorage.getItem("stats_token") || "");
+  const [range, setRange] = useState<number>(14);
+  const [data, setData] = useState<StatsData | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function load() {
+    if (!isStatsConfigured()) {
+      setError("后端尚未配置：请先部署 worker 并把 src/lib/stats-config.ts 的 STATS_ENDPOINT 改成真实地址。");
+      return;
+    }
+    if (!token) {
+      setError("请先输入统计访问令牌（部署 Worker 时设置的 ADMIN_TOKEN）。");
+      return;
+    }
+    sessionStorage.setItem("stats_token", token);
+    setLoading(true);
+    setError(null);
+    try {
+      const endpoint = STATS_ENDPOINT.replace(/\/$/, "");
+      const res = await fetch(`${endpoint}/api/stats?range=${range}`, {
+        headers: { "x-stats-token": token },
+      });
+      if (res.status === 401) {
+        setError("令牌不正确（401）。请确认输入的是部署 Worker 时设置的 ADMIN_TOKEN。");
+        setData(null);
+        return;
+      }
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}));
+        throw new Error(j.error || `HTTP ${res.status}`);
+      }
+      setData(await res.json());
+    } catch (e: any) {
+      setError("加载失败：" + (e?.message || String(e)));
+      setData(null);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <div>
+      <div className={styles.card}>
+        <h2>访问统计</h2>
+        <p className={styles.hint}>
+          访客 IP 与所在地区由 Cloudflare 边缘采集，访问时间/次数由后端聚合。数据仅站长可见，需输入部署 Worker 时设置的访问令牌。
+        </p>
+        <div className={styles.row} style={{ alignItems: "flex-end" }}>
+          <div className={styles.field} style={{ flex: 1 }}>
+            <label className={styles.label}>统计访问令牌 (ADMIN_TOKEN)</label>
+            <input
+              className={styles.input}
+              type="password"
+              value={token}
+              onChange={(e) => setToken(e.target.value)}
+              placeholder="部署 Worker 时 wrangler secret put ADMIN_TOKEN 的值"
+            />
+          </div>
+          <div className={styles.field} style={{ width: 140 }}>
+            <label className={styles.label}>统计区间</label>
+            <select className={styles.select} value={range} onChange={(e) => setRange(parseInt(e.target.value, 10))}>
+              <option value={7}>近 7 天</option>
+              <option value={14}>近 14 天</option>
+              <option value={30}>近 30 天</option>
+              <option value={90}>近 90 天</option>
+            </select>
+          </div>
+          <button className={styles.btn} disabled={loading} onClick={load}>
+            {loading ? "加载中…" : "查询"}
+          </button>
+        </div>
+        {error && <div className={`${styles.status} ${styles.err}`} style={{ marginTop: 12 }}>{error}</div>}
+      </div>
+
+      {data && (
+        <>
+          <div className={styles.card}>
+            <h2>概览</h2>
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+              <Stat label="总访问次数" value={data.total.toLocaleString()} />
+              <Stat label="独立访客 IP" value={data.unique.toLocaleString()} />
+              <Stat label="统计区间" value={`近 ${data.range} 天`} />
+            </div>
+          </div>
+
+          <div className={styles.card}>
+            <h2>每日访问量</h2>
+            <DailyChart daily={data.daily} />
+          </div>
+
+          <div className={styles.card}>
+            <h2>访客地区分布（国家 / 省 / 城市）</h2>
+            <RankTable rows={data.regions.map((r) => ({ name: [r.country, r.region, r.city].filter(Boolean).join(" / ") || "(未知)", c: r.c }))} />
+          </div>
+
+          <div className={styles.card}>
+            <h2>热门页面</h2>
+            <RankTable rows={data.paths.map((p) => ({ name: p.path || "/", c: p.c }))} />
+          </div>
+
+          <div className={styles.card}>
+            <h2>访问来源</h2>
+            <RankTable rows={data.referrers.map((r) => ({ name: r.referrer || "(直接访问)", c: r.c }))} maxLen={64} />
+          </div>
+
+          <div className={styles.card}>
+            <h2>最近访客（最近 {data.recent.length} 条）</h2>
+            <div className={styles.tableScroll}>
+              <table className={styles.table}>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>IP</th>
+                    <th>地区</th>
+                    <th>页面</th>
+                    <th>来源</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.recent.map((v, i) => (
+                    <tr key={i}>
+                      <td>{fmtTime(v.ts)}</td>
+                      <td>{v.ip || "(未知)"}</td>
+                      <td>{([v.country, v.region, v.city].filter(Boolean).join(" / ") || "(未知)")}</td>
+                      <td>{v.path || "/"}</td>
+                      <td style={{ maxWidth: 220, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{v.referrer || "(直接)"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+function Stat({ label, value }: { label: string; value: string }) {
+  return (
+    <div style={{ flex: "1 1 160px", background: "#0d1117", border: "1px solid #30363d", borderRadius: 10, padding: "14px 16px" }}>
+      <div style={{ fontSize: 13, color: "#8b949e" }}>{label}</div>
+      <div style={{ fontSize: 26, fontWeight: 700, marginTop: 4 }}>{value}</div>
+    </div>
+  );
+}
+
+function RankTable({ rows, maxLen = 48 }: { rows: { name: string; c: number }[]; maxLen?: number }) {
+  const max = Math.max(1, ...rows.map((r) => r.c));
+  if (!rows.length) return <p className={styles.hint}>暂无数据。</p>;
+  return (
+    <div className={styles.tableScroll}>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th style={{ width: 40 }}>#</th>
+            <th>名称</th>
+            <th style={{ width: 90 }}>次数</th>
+            <th style={{ width: 160 }}>占比</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r, i) => (
+            <tr key={i}>
+              <td>{i + 1}</td>
+              <td style={{ maxWidth: 360, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                {r.name.length > maxLen ? r.name.slice(0, maxLen) + "…" : r.name}
+              </td>
+              <td>{r.c.toLocaleString()}</td>
+              <td>
+                <div style={{ background: "#21262d", borderRadius: 4, height: 8, width: "100%" }}>
+                  <div style={{ background: "#58a6ff", height: 8, width: `${(r.c / max) * 100}%`, borderRadius: 4 }} />
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function DailyChart({ daily }: { daily: { day: string; c: number }[] }) {
+  if (!daily.length) return <p className={styles.hint}>暂无数据。</p>;
+  const chrono = [...daily].reverse(); // 升序：旧→新
+  const max = Math.max(1, ...chrono.map((d) => d.c));
+  const W = 640;
+  const H = 200;
+  const pad = 28;
+  const n = chrono.length;
+  const gap = 6;
+  const bw = Math.max(6, (W - pad * 2 - gap * (n - 1)) / n);
+  const totalW = bw * n + gap * (n - 1);
+  const offsetX = pad + Math.max(0, (W - pad * 2 - totalW) / 2);
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ maxWidth: W, display: "block" }} role="img" aria-label="每日访问量">
+      <line x1={pad} y1={H - pad} x2={W - pad} y2={H - pad} stroke="#30363d" />
+      {chrono.map((d, i) => {
+        const h = ((d.c / max) * (H - pad * 2));
+        const x = offsetX + i * (bw + gap);
+        const y = H - pad - h;
+        const showLabel = n <= 16 || i % Math.ceil(n / 12) === 0;
+        return (
+          <g key={d.day}>
+            <rect x={x} y={y} width={bw} height={Math.max(1, h)} fill="#58a6ff" rx={2}>
+              <title>{`${d.day}：${d.c} 次`}</title>
+            </rect>
+            {showLabel && (
+              <text x={x + bw / 2} y={H - pad + 12} fill="#8b949e" fontSize={9} textAnchor="middle">
+                {d.day.slice(5)}
+              </text>
+            )}
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function fmtTime(ts: number): string {
+  const d = new Date(ts);
+  const p = (x: number) => String(x).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
 }

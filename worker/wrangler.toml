@@ -1,0 +1,13 @@
+name = "portfolio-visits"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+# 非敏感的配置项放在这里；敏感密钥（ADMIN_TOKEN）用 `wrangler secret put` 设置，不要写进文件
+[vars]
+ALLOWED_ORIGIN = "https://trxunho.github.io"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "portfolio-visits"
+# 运行 `wrangler d1 create portfolio-visits` 后，把返回的那个 id 填到这里
+database_id = "REPLACE_WITH_YOUR_D1_ID"

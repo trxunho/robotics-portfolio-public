@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import VisitorTracker from "@/components/visitor-tracker";
 export const metadata: Metadata = {
   title: {
     default: "个人主页 | 行业调研 · 思想随笔 · 立象尽意",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <a href="#main" className="skip-link">
           跳转到主要内容
         </a>
+        <VisitorTracker />
         {children}
       </body>
     </html>
