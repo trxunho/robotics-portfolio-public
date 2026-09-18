@@ -23,10 +23,11 @@ export default function RootLayout({
           跳转到主要内容
         </a>
         <VisitorTracker />
-        {/* 不蒜子访客计数：全局加载即统计全站 PV/UV，零配置、无需后端。
-            不暴露访客 IP，仅给总数，符合「只需访问次数」的需求。 */}
+        {/* 访客计数（VerCount，不蒜子兼容替代，零配置、无需后端）。
+            全局加载即统计全站 PV/UV，不暴露访客 IP，仅给总数。
+            注：不蒜子官方后端长期不稳定，故改用兼容的 VerCount。 */}
         <Script
-          src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+          src="https://events.vercount.one/js"
           strategy="afterInteractive"
         />
         {children}

@@ -744,6 +744,19 @@ function StatsViewer() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // 计数器加载超时兜底：10 秒后仍未填充则提示，避免一直卡在「加载中…」
+  useEffect(() => {
+    const t = setTimeout(() => {
+      for (const id of ["busuanzi_value_site_pv", "busuanzi_value_site_uv"]) {
+        const el = document.getElementById(id);
+        if (el && el.textContent === "加载中…") {
+          el.textContent = "暂不可用（计数服务未响应，稍后刷新重试）";
+        }
+      }
+    }, 10000);
+    return () => clearTimeout(t);
+  }, []);
+
   async function load() {
     if (!isStatsConfigured()) {
       setError("后端尚未配置：请先部署 worker 并把 src/lib/stats-config.ts 的 STATS_ENDPOINT 改成真实地址。");
@@ -784,7 +797,7 @@ function StatsViewer() {
       <div className={styles.card}>
         <h2>访问统计</h2>
         <p className={styles.hint}>
-          下方为「零配置实时计数」（不蒜子，无需任何后端）：全站总访问次数与独立访客数，部署后立即可见。仅给总数，不展示访客 IP。
+          下方为「零配置实时计数」（VerCount，无需任何后端）：全站总访问次数与独立访客数，部署后立即可见。仅给总数，不展示访客 IP。
         </p>
         <div style={{ display: "flex", gap: 28, flexWrap: "wrap", marginTop: 10 }}>
           <div>
