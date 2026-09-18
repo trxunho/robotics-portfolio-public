@@ -784,7 +784,18 @@ function StatsViewer() {
       <div className={styles.card}>
         <h2>访问统计</h2>
         <p className={styles.hint}>
-          访客 IP 与所在地区由 Cloudflare 边缘采集，访问时间/次数由后端聚合。数据仅站长可见，需输入部署 Worker 时设置的访问令牌。
+          下方为「零配置实时计数」（不蒜子，无需任何后端）：全站总访问次数与独立访客数，部署后立即可见。仅给总数，不展示访客 IP。
+        </p>
+        <div style={{ display: "flex", gap: 28, flexWrap: "wrap", marginTop: 10 }}>
+          <div>
+            总访问次数（PV）：<b id="busuanzi_value_site_pv">加载中…</b>
+          </div>
+          <div>
+            独立访客数（UV）：<b id="busuanzi_value_site_uv">加载中…</b>
+          </div>
+        </div>
+        <p className={styles.hint} style={{ marginTop: 12 }}>
+          如需更细的「按访问时间 / 页面分布」统计，可部署仓库内 <code>worker/</code> 的 Cloudflare 方案并填入令牌，下方查询框为进阶入口（当前未部署不影响上面计数）。
         </p>
         <div className={styles.row} style={{ alignItems: "flex-end" }}>
           <div className={styles.field} style={{ flex: 1 }}>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 import VisitorTracker from "@/components/visitor-tracker";
 export const metadata: Metadata = {
   title: {
@@ -22,6 +23,12 @@ export default function RootLayout({
           跳转到主要内容
         </a>
         <VisitorTracker />
+        {/* 不蒜子访客计数：全局加载即统计全站 PV/UV，零配置、无需后端。
+            不暴露访客 IP，仅给总数，符合「只需访问次数」的需求。 */}
+        <Script
+          src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+          strategy="afterInteractive"
+        />
         {children}
       </body>
     </html>
